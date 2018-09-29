@@ -17,6 +17,40 @@ public class Personagem {
 	// Atributos do tipo boolean recebem valores true ou false
 	private boolean bigode, sapato, luvas, botoes, chapeu;
 
+	// construtor sem argumento
+	public Personagem() {
+		nome = "";	cor = "";
+		cabelo = ""; roupa = "";
+		olhos = ""; 	dataNascimento = "";
+		email = ""; 	telefone = "";
+		bigode = false; 	sapato = false;
+		luvas = false; botoes = false; 
+		chapeu= false; 
+	}
+
+	// construtor com argumentos
+	public Personagem(String novoNome, String novaCor,
+			String novoCabelo, String novaRoupa, 
+			String novosOlhos, String novaDataNascimento,
+			String novoEmail, String novoTelefone,
+			boolean novoBigode, boolean novoSapato,
+			boolean novasLuvas, boolean novosBotoes,
+			boolean novoChapeu) {
+		nome = novoNome;	cor = novaCor;
+		cabelo = novoCabelo; roupa = novaRoupa;
+		olhos = novosOlhos; 	
+		dataNascimento = novaDataNascimento;
+		email = novoEmail; 	telefone = novoTelefone;
+		bigode = novoBigode; 	sapato = novoSapato;
+		luvas = novasLuvas; botoes = novosBotoes; 
+		chapeu= novoChapeu;
+	}
+
+	
+	
+	
+	
+	
 	// métodos get (recuperar) e set (aterar)
 	public void setNome(String novoNome) {
 		nome = novoNome;
@@ -121,4 +155,33 @@ public class Personagem {
 	public boolean getChapeu() {
 		return chapeu;
 	}
+	
+	public void mostrarInformacoes() {
+		System.out.println("----- Personagem -----");
+		System.out.println("Nome: " + getNome());
+		System.out.println("Cor: " + getCor());
+		System.out.println("Cabelo: " + getCabelo());
+		System.out.println("Roupa: " + getRoupa());
+		System.out.println("Olhos: " + getOlhos());
+		System.out.println("Data Nascimento: " + getDataNascimento());
+		System.out.println("E-mail: " + getEmail());
+		System.out.println("Telefone: " + getTelefone());
+		System.out.println("Bigode: " + getBigode());
+		System.out.println("Sapato: " + getSapato());
+		System.out.println("Luvas: " + getLuvas());
+		System.out.println("Botões: " + getBotoes());
+		System.out.println("Chapeu: " + getChapeu() + "\n");
+	
+	}
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
 }

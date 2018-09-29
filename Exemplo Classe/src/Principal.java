@@ -14,6 +14,11 @@ public class Principal {
 		// criando objetos
 		Personagem mario = new Personagem();
 		Personagem megaman = new Personagem();
+		Personagem bomberman = new  Personagem(
+				"Bomberman", "branco", "marrom", 
+				"azul", "preto", "01/01/1969", 
+				"bomberman@gmail.com", "1234-1234",
+				false, true, true, false, false);				
 
 		// antes do encapsulamento
 		// // atribuindo valores as características do objeto Mario
@@ -141,5 +146,7 @@ public class Principal {
 		System.out.println("Botões: " + megaman.getBotoes());
 		System.out.println("Chapeu: " + megaman.getChapeu() + "\n");
 
+		bomberman.mostrarInformacoes();
+		
 	}
 }
