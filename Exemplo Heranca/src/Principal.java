@@ -16,22 +16,24 @@ public class Principal {
 	public static void main(String[] args) {
 
 		// criando objetos
+		//Politico pol1 = new Politico();
 		Governador gov1 = new Governador();
-		Presidente pres1 = new Presidente();
+		//Presidente pres1 = new Presidente();
 		
-//		gov1.setNome("João da silva");
-//		gov1.setNumero(123);
-//		gov1.setPartido("ASD");
-//		gov1.setProposta("Viver melhor");
+		gov1.setNome("João da silva");
+		gov1.setNumero(123);
+		gov1.setPartido("ASD");
+		gov1.setProposta("Viver melhor");
 		gov1.setSlogan("Faça valer a pena");
 		gov1.setVice("Não sendo o Vasco :)");
 		gov1.oQueFaz();
+		gov1.mostrarDados("apos eleicao");
 		
-		pres1.setNome("Maria da Gama");
-		pres1.setNumero(546);
-		pres1.setPartido("zxc");
-		pres1.setProposta("Capemdien");
-		pres1.setVice("Ame o próximo");
-		pres1.oQueFaz();
+//		pres1.setNome("Maria da Gama");
+//		pres1.setNumero(546);
+//		pres1.setPartido("zxc");
+//		pres1.setProposta("Capemdien");
+//		pres1.setVice("Ame o próximo");
+//		pres1.oQueFaz();
 	}
 }

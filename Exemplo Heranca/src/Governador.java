@@ -20,15 +20,41 @@ public class Governador extends Politico {
 
 	// construtor sem argumento
 	public Governador() {
-		// setNumero(0);
-		// this.partido = "";
-		// this.proposta = "";
+		// primeira forma de inicializar atributos da superclasse
+		//super();
+		//super(0,"","","");
+		
+		// segunda forma
+		setNome("");
+		setPartido("");
+		setProposta("");
+		setNumero(0);
+		
 		this.vice = "";
-		// this.nome = "";
 		this.slogan = "";
+		System.out.println("classe Governador");
+	}
+	
+	
+	
+	
+	public Governador(int numero, String partido, String proposta,
+			String nome, String vice, String slogan) {
+		
+		super(numero, partido, proposta, nome);
+		
+		setVice(vice);
+		setSlogan(slogan);
+		
+		// ou
+		//this.vice = vice;
+		//this.slogan = slogan;
+		
 	}
 
-	// métodos gets e sets dos atributos
+	
+	
+	/// métodos gets e sets dos atributos
 
 	public String getVice() {
 		return this.vice;
@@ -58,4 +84,48 @@ public class Governador extends Politico {
 				+ "defendendo seus interesses junto à Presidência "
 				+ "e buscando investimentos.");
 	}
+	
+	public void mostrarDados() {
+//		super.mostrarDados();
+		
+		System.out.println("Informacoes Governador");
+		System.out.println("Nome: " + getNome());
+		System.out.println("Proposta: " + getProposta());
+		System.out.println("Numero: " + getNumero());
+		System.out.println("Partido: " + getPartido());
+		System.out.println("Vice: " + getVice());
+		System.out.println("Slogan: " + getSlogan());
+		
+	}
+	
+	public void mostrarDados(String situacao) {
+		
+		if (situacao.compareTo("antes eleicao") == 0) {
+			mostrarDados();
+		} else if (situacao.compareTo("apos eleicao") == 0) {
+			System.out.println("Informacoes Governador");
+			System.out.println("Nome: " + getNome());
+			System.out.println("Proposta: então morra");
+			System.out.println("Numero: " + getNumero());
+			System.out.println("Partido: " + getPartido());
+			System.out.println("Vice: " + getVice());
+			System.out.println("Slogan: pior que está "
+					+ "não fica");	
+		}
+		
+	}
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
 }
