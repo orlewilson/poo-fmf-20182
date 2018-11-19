@@ -19,5 +19,67 @@
  				equipe.
  */
 public class Acampamento {
-	
+
+	// atributos
+	private String nome;
+	private String equipe;
+	private int idade;
+
+	// construtor
+	public Acampamento() {
+		// primeira forma
+		this.nome = "";
+		this.equipe = "Sem equipe";
+		this.idade = 0;
+
+		// segunda forma
+		setNome("");
+		setEquipe("Sem Equipe");
+		setIdade(0);
+	}
+
+	// métodos
+
+	public void setNome(String nome) {
+		this.nome = nome;
+	}
+
+	public String getNome() {
+		return this.nome;
+	}
+
+	public void setEquipe(String equipe) {
+		this.equipe = equipe;
+	}
+
+	public String getEquipe() {
+		return this.equipe;
+	}
+
+	public void setIdade(int idade) {
+		this.idade = idade;
+	}
+
+	public int getIdade() {
+		return this.idade;
+	}
+
+	public void imprimir() {
+		System.out.println("Nome: " + getNome());
+		System.out.println("Equipe: " + getEquipe());
+		System.out.println("Idade: " + getIdade());
+	}
+
+	public void separarGrupo() {
+
+		if (getIdade() >= 6 && getIdade() <= 10) {
+			setEquipe("A");
+		} else if (getIdade() >= 11 && getIdade() <= 20) {
+			setEquipe("B");
+		} else if (getIdade() >= 21) {
+			setEquipe("C");
+		} else {
+			setEquipe("Sem Equipe");
+		}
+	}
 }

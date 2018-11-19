@@ -27,5 +27,29 @@ public class PrincipalAcampamento {
 
 	public static void main(String[] args) {
 		
+		Acampamento joao = new Acampamento();
+		Acampamento maria = new Acampamento();
+		
+		joao.setNome("João da Silva");
+		joao.setIdade(22);
+		
+		maria.setNome("Maria Gonzaga");
+		maria.setIdade(20);
+			
+		joao.imprimir();
+		maria.imprimir();
+		
+		joao.separarGrupo();
+		maria.separarGrupo();
+		
+		joao.imprimir();
+		maria.imprimir();
+		
 	}
 }
+
+
+
+
+
+
